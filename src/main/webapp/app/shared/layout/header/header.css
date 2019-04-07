@@ -45,7 +45,7 @@ Navbar styles
 .jh-navbar .dropdown-item.active,
 .jh-navbar .dropdown-item.active:focus,
 .jh-navbar .dropdown-item.active:hover {
-  background-color: #45a5a4;
+  background-color: #a54441;
 }
 .jh-navbar .dropdown-toggle::after {
   margin-left: 0.15em;

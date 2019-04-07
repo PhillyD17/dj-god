@@ -13,7 +13,7 @@ import Entities from 'app/entities';
 import PrivateRoute from 'app/shared/auth/private-route';
 import ErrorBoundaryRoute from 'app/shared/error/error-boundary-route';
 import { AUTHORITIES } from 'app/config/constants';
-
+import Music from 'app/profile/music';
 // tslint:disable:space-in-parens
 const Account = Loadable({
   loader: () => import(/* webpackChunkName: "account" */ 'app/modules/account'),
@@ -25,7 +25,6 @@ const Admin = Loadable({
   loading: () => <div>loading ...</div>
 });
 // tslint:enable
-
 const Routes = () => (
   <div className="view-routes">
     <ErrorBoundaryRoute path="/login" component={Login} />

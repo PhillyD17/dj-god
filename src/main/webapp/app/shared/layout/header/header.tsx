@@ -36,7 +36,14 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
     this.props.onLocaleChange(langKey);
   };
 
-  renderDevRibbon = () => (this.props.isInProduction === false ? <div className="ribbon dev" /> : null);
+  renderDevRibbon = () =>
+    this.props.isInProduction === false ? (
+      <div className="ribbon dev">
+        <a href="">
+          <Translate contentKey={`global.ribbon.${this.props.ribbonEnv}`} />
+        </a>
+      </div>
+    ) : null;
 
   toggleMenu = () => {
     this.setState({ menuOpen: !this.state.menuOpen });
