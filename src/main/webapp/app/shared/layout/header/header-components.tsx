@@ -1,6 +1,5 @@
 import React from 'react';
 import { Translate } from 'react-jhipster';
-
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, NavItem, NavLink, NavbarBrand } from 'reactstrap';
 import { NavLink as Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,7 +17,6 @@ export const NavDropdown = props => (
     </DropdownMenu>
   </UncontrolledDropdown>
 );
-
 export const BrandIcon = props => (
   <div {...props} className="brand-icon">
     <img src="content/images/dj_logo.png" alt="Logo" />

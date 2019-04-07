@@ -12,7 +12,7 @@ const commonConfig = require('./webpack.common.js');
 
 const ENV = 'development';
 
-module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
+module.exports = options => webpackMerge(commonConfig({ env: ENV }), {
   devtool: 'cheap-module-source-map', // https://reactjs.org/docs/cross-origin-errors.html
   mode: ENV,
   entry: [
@@ -43,7 +43,7 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
         '/management',
         '/swagger-resources',
         '/v2/api-docs',
-        '/h2-console',        
+        '/h2-console',
         '/auth'
       ],
       target: `http${options.tls ? 's' : ''}://127.0.0.1:8080`,
@@ -80,11 +80,11 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
     new webpack.HotModuleReplacementPlugin(),
     new writeFilePlugin(),
     new webpack.WatchIgnorePlugin([
-      utils.root('src/test'),
+      utils.root('src/test')
     ]),
     new WebpackNotifierPlugin({
       title: 'JHipster',
-      contentImage: path.join(__dirname, 'logo-jhipster.png')
+      contentImage: path.join(__dirname, 'dj_logo.png')
     })
   ].filter(Boolean)
 });
