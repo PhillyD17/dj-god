@@ -1,12 +1,10 @@
 import 'react-toastify/dist/ReactToastify.css';
 import './app.css';
-
 import React from 'react';
 import { connect } from 'react-redux';
 import { Card } from 'reactstrap';
 import { HashRouter as Router } from 'react-router-dom';
 import { ToastContainer, ToastPosition, toast } from 'react-toastify';
-
 import { IRootState } from 'app/shared/reducers';
 import { getSession } from 'app/shared/reducers/authentication';
 import { getProfile } from 'app/shared/reducers/application-profile';
@@ -19,13 +17,11 @@ import { AUTHORITIES } from 'app/config/constants';
 import AppRoutes from 'app/routes';
 
 export interface IAppProps extends StateProps, DispatchProps {}
-
 export class App extends React.Component<IAppProps> {
   componentDidMount() {
     this.props.getSession();
     this.props.getProfile();
   }
-
   render() {
     const paddingTop = '60px';
     return (
@@ -42,7 +38,6 @@ export class App extends React.Component<IAppProps> {
               isAdmin={this.props.isAdmin}
               currentLocale={this.props.currentLocale}
               onLocaleChange={this.props.setLocale}
-              ribbonEnv={this.props.ribbonEnv}
               isInProduction={this.props.isInProduction}
               isSwaggerEnabled={this.props.isSwaggerEnabled}
             />

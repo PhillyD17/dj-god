@@ -38,16 +38,16 @@ Generic styles
 .invalid-feedback {
   display: inline;
 }
-
 /* other generic styles */
-
 .jh-card {
   padding: 1.5%;
-  margin-top: 20px;
+  margin-top: 30px;
   border: none;
-  background-image: url('/static/images/turntable.png') !important;
+  background-image: url(../app/images/sickdj.jpg);
+  width: 100%;
+  height: 500px;
+  background-position: center;
 }
-
 .error {
   color: white;
   background-color: red;

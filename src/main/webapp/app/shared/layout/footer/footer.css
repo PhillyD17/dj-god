@@ -1,3 +1,7 @@
 .footer {
   height: 50px;
+  font-family: 'Roboto', sans-serif;
+  color: #a54441;
+  font-size: 16px;
+  padding: 1%;
 }
