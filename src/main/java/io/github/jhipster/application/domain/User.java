@@ -35,6 +35,8 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
+    private String favorites;
+
     @NotNull
     @Pattern(regexp = Constants.LOGIN_REGEX)
     @Size(min = 1, max = 50)
@@ -171,6 +173,10 @@ public class User extends AbstractAuditingEntity implements Serializable {
     public String getResetKey() {
         return resetKey;
     }
+
+    public String getFavorites() {return favorites;}
+
+    public void setFavorites(String fav){this.favorites = fav;}
 
     public void setResetKey(String resetKey) {
         this.resetKey = resetKey;
