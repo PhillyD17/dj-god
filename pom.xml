@@ -16,6 +16,8 @@
         <!-- jhipster-needle-maven-plugin-repository -->
     </pluginRepositories>
 
+
+
     <!-- jhipster-needle-distribution-management -->
 
     <properties>
@@ -389,6 +391,7 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <!--suppress UnresolvedMavenProperty -->
                     <mainClass>${start-class}</mainClass>
                     <executable>true</executable>
                     <fork>true</fork>
@@ -876,6 +879,7 @@
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-maven-plugin</artifactId>
                         <configuration>
+                            <!--suppress UnresolvedMavenProperty -->
                             <mainClass>${start-class}</mainClass>
                             <executable>true</executable>
                         </configuration>
